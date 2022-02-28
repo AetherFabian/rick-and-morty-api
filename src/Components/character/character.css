@@ -1,0 +1,20 @@
+.Character__container{
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    height: 150px;
+    border: 1px solid #aaaaaa;
+}
+.Character__image{
+    width: 150px;
+    height: 150px;
+}
+.Character__data{
+    margin-left: 10px;
+}
+.Character__data h3,p,small{
+    margin: 0;
+    padding: 0;
+}
