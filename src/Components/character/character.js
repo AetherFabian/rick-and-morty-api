@@ -6,24 +6,28 @@ const Character = (props) =>{
     const { character } = props
     return(
         <React.Fragment>
-            <div className = "Character__container">
-                <Link 
-                    className="Character__image"
-                    to={`/character/${character.id}`}
-                >
-                    <img 
+            <Link
+                className="Character__container"
+                to={`/character/${character.id}`}
+            >
+            <div className="Characters">
+                <div className = "Character__container">
+                <div className="Character__img">
+                <img
                         className= "Character__image"
-                        src={props.character.image} 
+                        src={props.character.image}
                         alt={props.character.name}
                     />
-                </Link>
-                <div className="Character__Data">
-                    <h2 className = "Character__name">{props.character.name}</h2>
-                    <p className = "Character__species">{props.character.species}</p>
-                    <p className = "Character__status">{props.character.status}</p>
-                    <small>{props.character.gender}</small>
+                </div>
+                    <div className="Character__Data">
+                        <h2 className = "Character__name">{props.character.name}</h2>
+                        <p className = "Character__species">{props.character.species}</p>
+                        <p className = "Character__status">{props.character.status}</p>
+                        <p className="Character__gender">{props.character.gender}</p>
+                    </div>
                 </div>
             </div>
+            </Link>
         </React.Fragment>
     );
 };

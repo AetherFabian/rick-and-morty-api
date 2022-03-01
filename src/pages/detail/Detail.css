@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+.Details__container {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    width: 600px;
+    height: 600px;
+    background-color: #69C8ECFF;
+    border-color: gainsboro;
+    border-radius: 15px;
+}
+.Details__img{
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+}
+
+img{
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+}
+h1{
+    margin: auto;
+    padding: 10px;
+    color: #25C44F;
+    font-family: 'Get Schwifty';
+}
+h3{
+    margin: auto;
+    padding-left: 10px;
+    color: #4f5e96;
+    font-family: 'Get Schwifty';
+}
+.Data__row p, small{
+    color: gainsboro;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+  }

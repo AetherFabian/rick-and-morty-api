@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+.back{
+    background-image: url(https://fondosmil.com/fondo/27337.jpg);
+}
+.logo {
+    display:block;
+    margin:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: auto;
+    height: 150px;
+}
