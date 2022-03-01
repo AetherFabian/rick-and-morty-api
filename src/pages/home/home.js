@@ -8,19 +8,11 @@ class Home extends React.Component{
         title:"Rick and Morty X React",
         characters:[],
     };
-<<<<<<< HEAD
-    
-    componentDidMount = () => {
-        this.getData(URL)
-    };
-    
-=======
 
     componentDidMount = () => {
         this.getData(URL)
     };
 
->>>>>>> deploy
     getData = async(api_url) => {
         const response = await Http.instance.get_characters()
         console.log(response)
@@ -30,13 +22,6 @@ class Home extends React.Component{
     render(){
         return(
             <React.Fragment>
-<<<<<<< HEAD
-                <h1>{this.state.title}</h1>
-                <div className="Characters">
-                    {this.state.characters.map((character) => {
-                        return <Character character = {character} />
-                    } )}
-=======
                 <div className="back">
                     <div className="logoHolder">
                         <img className="logo"src="https://lyricstranslate.com/files/styles/artist/public/Rick_and_Morty_logo.png" alt="Rick and Morty"/>
@@ -46,15 +31,10 @@ class Home extends React.Component{
                             return <Character character = {character} />
                         } )}
                     </div>
->>>>>>> deploy
                 </div>
             </React.Fragment>
         );
     }
 }
 
-<<<<<<< HEAD
 export default Home;
-=======
-export default Home;
->>>>>>> deploy
