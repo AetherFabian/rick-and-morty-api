@@ -5,9 +5,10 @@ import Http from "../../lib/request";
 
 const Character = (props) =>{
     const { character } = props
-    console.log(character)
     const id = character["id"]
-    
+
+    const imageAPI = 'http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/' + id + '.png';
+
     return(
         <React.Fragment>
             <Link
@@ -19,7 +20,7 @@ const Character = (props) =>{
                 <div className="Character__img">
                 <img
                         className= "Character__image"
-                        src={props.character}
+                        src={imageAPI}
                         alt={props.character["id"]}
                     />
                     

@@ -23,16 +23,5 @@ class Http{
             throw new Error(err);
         }
     }
-    get_image = async(id) => {
-        try{
-            const request = await fetch (`${URL}img/champion/${id}.png`);
-            var response = await request.blob();
-            console.log(response)
-            return response
-
-        }catch(err){
-            throw new Error(err);
-        }
-    }
 }
 export default Http;

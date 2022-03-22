@@ -11,11 +11,10 @@ const DetailCharacter = () =>{
     useEffect(()=>{
         const fetchCharacter = async ( ) =>{
             const characterID = await Http.instance.get_character(id);
-            const image = await Http.instance.get_image(id);
+            const imageAPI = 'http://ddragon.leagueoflegends.com/cdn/12.5.1/img/champion/' + id + '.png';
             const champion = Object.values(characterID);
-            console.log(champion[0], id)
             setCharacter(champion[0])
-            setImage(image)
+            setImage(imageAPI)
         }
         fetchCharacter();
     },[id])
