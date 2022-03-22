@@ -30,20 +30,14 @@ h1{
     margin: auto;
     padding: 10px;
     color: #25C44F;
-    font-family: 'Get Schwifty';
 }
 h3{
     margin: auto;
     padding-left: 10px;
     color: #4f5e96;
-    font-family: 'Get Schwifty';
 }
 .Data__row p, small{
     color: gainsboro;
     padding-left: 30px;
     padding-bottom: 10px;
 }
-@font-face {
-    font-family: 'Get Schwifty';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
-  }

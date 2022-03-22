@@ -3,10 +3,11 @@ import "./home.css"
 import Character from "../../Components/character/character";
 import Http from "../../lib/request";
 
+
+
 class Home extends React.Component{
     state={
-        title:"Rick and Morty X React",
-        characters:[],
+        characters:[]
     };
 
     componentDidMount = () => {
@@ -15,10 +16,11 @@ class Home extends React.Component{
 
     getData = async(api_url) => {
         const response = await Http.instance.get_characters()
-        console.log(response)
-        this.setState({ characters: response });
+        const id = Object.values(response)
+        console.log(id)
+        this.setState({ characters: id });
     };
-
+    
     render(){
         return(
             <React.Fragment>
@@ -28,13 +30,16 @@ class Home extends React.Component{
                     </div>
                     <div className="Characters">
                         {this.state.characters.map((character) => {
-                            return <Character character = {character} />
+                            return <Character character = {character} key = {character.id}/>
                         } )}
                     </div>
                 </div>
             </React.Fragment>
         );
     }
+
+
 }
+
 
 export default Home;

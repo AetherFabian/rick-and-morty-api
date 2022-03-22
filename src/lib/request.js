@@ -1,13 +1,13 @@
-const URL = "https://rickandmortyapi.com/api/character/"
+const URLS = "http://ddragon.leagueoflegends.com/cdn/12.5.1/"
 
 class Http{
     static instance = new Http()
 
     get_characters = async() =>{
         try{
-            const request = await fetch (`${URL}?gender=female`)
+            const request = await fetch (`${URLS}data/en_US/champion.json`)
             const response = await request.json()
-            return response.results
+            return response.data
 
         }catch(err){
             throw new Error(err);
@@ -15,8 +15,19 @@ class Http{
     }
     get_character = async(id) => {
         try{
-            const request = await fetch (`${URL}${id}`)
+            const request = await fetch (`${URLS}data/en_US/champion/${id}.json`)
             const response = await request.json()
+            return response.data
+
+        }catch(err){
+            throw new Error(err);
+        }
+    }
+    get_image = async(id) => {
+        try{
+            const request = await fetch (`${URL}img/champion/${id}.png`);
+            var response = await request.blob();
+            console.log(response)
             return response
 
         }catch(err){
